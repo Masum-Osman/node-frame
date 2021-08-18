@@ -1,24 +1,22 @@
 'user strict';
 const config = require('config');
 
-// var mysql = require('mysql');
-const { Pool } = require('pg')
-const pg = require('pg')
+var mysql = require('mysql');
 const logger = require('../../helper/logger');
 
 const DBOptionsForTLdb = {
-    host: config[3].get('PGSQL.HOST'),
-    user: config[3].get('PGSQL.USER'),
-    password: config[3].get('PGSQL.PASSWORD'),
-    database: config[3].get('PGSQL.DATABASE'),
-    dialect: config[3].get('PGSQL.DIALECT'),
+    host: config[2].get('MYSQL.HOST'),
+    user: config[2].get('MYSQL.USER'),
+    password: config[2].get('MYSQL.PASSWORD'),
+    database: config[2].get('MYSQL.DATABASE'),
+    dialect: config[2].get('MYSQL.DIALECT'),
     pool: {
         min: 0,
         max: 200,
     }
 };
 
-var  connectionInSUdb = new Pool(
+var  connectionInSUdb = mysql.createPool(
     {
         host: DBOptionsForTLdb.host,
         user: DBOptionsForTLdb.user,
@@ -31,21 +29,11 @@ var  connectionInSUdb = new Pool(
             max: 100,
             min: 0,
             acquire: 30000,
+            //idle: 20000,
         },
     });
 
-    logger.info("Opening connection to DB" + connectionInSUdb);
+    logger.info("Opening connection to MySql DB" + connectionInSUdb);
 
 // exports.mysql = mysql;
-// exports.pg = pg;
-
-// connectionInSUdb.query('SELECT NOW()', (err, res) => {
-//     console.log(err, res) 
-//     connectionInSUdb.end() 
-//   })
-
-// console.log(connectionInSUdb);
-// exports.shopUpDB = connectionInSUdb;
-module.exports = {
-    connectionInSUdb   
-}
+exports.shopUpDB = connectionInSUdb;

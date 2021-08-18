@@ -2,7 +2,7 @@ const connection = require('../../../../libs/dbConnect/mysql/mysqlCon10');
 const sqlQueryString = require('./sqlQueryString1');
 
 function addNewUser(value, cb) {
-    connection.connectionInSUdb(function (err,sql)  
+    connection.shopUpDB.getConnection(function (err,sql)  
     {
         if (err) return cb(new Error('Failed to connect mysql database '), null);
         

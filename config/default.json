@@ -15,22 +15,9 @@
           "HOST": "localhost",
           "USER": "root",
           "PASSWORD": "",
-          "DATABASE": "shop_up",
+          "DATABASE": "ai_bees",
           "DIALECT": "mysql",
           "dialectModulePath": "mysql"
-        }
-    },
-    {
-        "PORT": "3306",
-        "BASE_URL": "127.0.0.1",
-        "API_URL": "127.0.0.1/api",
-        "PGSQL": {
-          "HOST": "localhost",
-          "USER": "postgres",
-          "PASSWORD": "password",
-          "DATABASE": "",
-          "DIALECT": "postgres",
-          "dialectModulePath": "postgres"
         }
     }
 ]

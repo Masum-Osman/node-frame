@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken'),
-secret = require('../config/env.config.js').jwt_secret,
 crypto = require('crypto');
 
 exports.verifyRefreshBodyField = (req, res, next) => {
@@ -47,25 +46,56 @@ exports.validJWTNeeded = (req, res, next) =>
 
 exports.validJWTForExistingPhPToken = (req, res, next) =>
 {
-   //only forexisting system
-    const secret = 'AEYjGNIRVGEtKSIarg0zCMEzOoNsKbxzzAFjTZWCrNfRaKHrOZ0gYf66cqRDcYrKFtv9Hp6J8NU3kh7xb47V4JvTGKGARAMhngqfcn7T63W7iCyvolcoaqRIw0Vi1aarol8902r5c1ss';
-   
-   //secret = "0vwFYqkSzazDSVvBdX08_TOVrdWo6I5hsMm"
-   if (req.headers['authorization'])
-   {
-       try
-       {
-           let authorization = req.headers['authorization'].split(' ');
-           if (authorization[0] !== 'Bearer') {
-               return res.status(401).send();
-           } else {
-               req.jwt = jwt.verify(authorization[1], secret);
-               return next();
-           }
-       } catch (err) {
-           return res.status(403).send("Token authorization failled");
-       }
-   } else {
-       return res.status(401).send("Token Not Found");
-   }
+    const secret = 'TOP_SECRET';
+
+    if (req.headers['authorization'])
+    {
+        try
+        {
+            let authorization = req.headers['authorization'].split(' ');
+            if (authorization[0] !== 'Bearer') {
+                return res.status(401).send();
+            } else {
+                req.jwt = jwt.verify(authorization[1], secret);
+                return next();
+            }
+        } catch (err) {
+            return res.status(403).send("Token authorization failled");
+        }
+    } else {
+        return res.status(401).send("Token Not Found");
+    }
+};
+
+
+exports.isPasswordAndUserMatch = (req, res, next) => 
+{
+    req.body = 
+    {
+        userid: "1",
+        userType: "admin",
+        username : "Masum Osman",
+        phone: "01686163323",
+        team: "dev"
+    };
+    return next();
+};
+
+
+exports.login = (req, res) => {
+    
+    var jwtSecret = "TOP_SECRET";
+
+    try {
+        let refreshId = req.body.id + jwtSecret;
+        let salt = crypto.randomBytes(16).toString('base64');
+        let hash = crypto.createHmac('sha512', salt).update(refreshId).digest("base64");
+        req.body.refreshKey = salt;
+        let token = jwt.sign(req.body, jwtSecret);
+        let b = new Buffer(hash);
+        let refresh_token = b.toString('base64');
+        res.status(201).send({accessToken: token, refreshToken: refresh_token});
+    } catch (err) {
+        res.status(500).send({errors: err});
+    }
 };
