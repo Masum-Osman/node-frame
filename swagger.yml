@@ -1,0 +1,131 @@
+swagger: '2.0'
+info:
+  description: |
+    This is a sample server.  You can find 
+    out more about Swagger at 
+    [http://swagger.io](http://swagger.io) or on 
+    [irc.freenode.net, #swagger](http://swagger.io/irc/).
+  version: 1.0.0
+  title: Swagger discount project
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: osmanmasum.cs@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+# host: petstore.swagger.io
+# basePath: /v2
+tags:
+- name: discount_ai-bees
+  description: Everything about ai-bees project
+  externalDocs:
+    description: Find out more
+    url: http://swagger.io
+# schemes:
+# - http
+paths:
+  /api/1/check_discount:
+    post:
+      tags:
+      - discount, product
+      summary: Check if the product have any discount available
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: product object that needs to be checked against the store
+        required: true
+        schema:
+          $ref: '#/definitions/check_discount_req'
+      responses:
+        200:
+          description: successful operation
+          schema:
+            items:
+              $ref: '#/definitions/check_discount_res'
+        405:
+          description: Invalid input
+        403:
+          description: Token authorization failled
+      security:
+      - petstore_auth:
+        - write:pets
+        - read:pets
+  /api/1/get_token:
+    get:
+      tags:
+      - token, authorization
+      summary: get jwt token from the system to use other secured routes
+      description: Multiple status values can be provided with comma separated strings
+      produces:
+      - application/json
+      responses:
+        200:
+          description: successful operation
+          schema:
+            items:
+              $ref: '#/definitions/Token'
+        400:
+          description: Invalid status value
+      security:
+      - petstore_auth:
+        - write:pets
+        - read:pets
+  
+securityDefinitions:
+  petstore_auth:
+    type: oauth2
+    authorizationUrl: http://petstore.swagger.io/oauth/dialog
+    flow: implicit
+    scopes:
+      write:pets: modify pets in your account
+      read:pets: read your pets
+  api_key:
+    type: apiKey
+    name: api_key
+    in: header
+
+definitions:
+  check_discount_req:
+    type: object
+    properties:
+      product_code:
+        type: string
+      user_id:
+        type: integer
+        format: int64
+      amount:
+        type: integer
+        format: int32
+
+  check_discount_res:
+    type: object
+    properties:
+      discount_amount:
+        type: integer
+        format: int64
+        example : 150
+  Token:
+    type: object
+    required:
+    - name
+    - photoUrls
+    properties:
+      accessToken:
+        type: string
+        example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiIxIiwidXNlclR5cGUiOiJhZG1pbiIsInVzZXJuYW1lIjoiTWFzdW0gT3NtYW4iLCJwaG9uZSI6IjAxNjg2MTYzMzIzIiwidGVhbSI6ImRldiIsInJlZnJlc2hLZXkiOiI1dVlsQ0RQS2tlajBDckI2VzJSQ093PT0iLCJpYXQiOjE2MjkyODQyMjF9.RX4looYzC68zQBxUk8bY3_A5lOG-t-WilPU7WRR7sro
+      refreshToken:
+        type: string
+        example: SCtnYkpIZU8waGwxS0J0b3huVlU4Y0tKK1RDL2RXVkg4bjNtYzNQMjRFN0taVzlmaWZzRTJwQ1pPOTJaWWVER3I4RW96UTRyVFpvQTAwUU8yRncxRHc9PQ==
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /t16643/discount/1.0.0
+schemes:
+ - https
+ - http

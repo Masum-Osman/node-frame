@@ -117,3 +117,4 @@ SyntaxError: Unexpected token 'var'
     at Module._compile (internal/modules/cjs/loader.js:1138:30)
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)
 Wednesday, August 18th, 2021, 4:53:46 PM [info]: main - Opening connection to MySql DB[object Object]
+Wednesday, August 18th, 2021, 4:56:43 PM [info]: main - Opening connection to MySql DB[object Object]

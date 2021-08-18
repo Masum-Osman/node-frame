@@ -4,11 +4,11 @@ const validateRouteAccess = require('../../../../../common/middleware/authValida
 const apiVersion = '1';
 
 var ridesRoute = function (app) {
-    app.post('/api/'+apiVersion+'/get_token', [
+    app.get('/api/'+apiVersion+'/get_token', [
         validateRouteAccess.isPasswordAndUserMatch,
         validateRouteAccess.login
     ]);
-    
+
     app.post('/api/'+apiVersion+'/check_discount', [
         validateRouteAccess.validJWTForExistingPhPToken,
         addUserController.addUser
