@@ -1,0 +1,29 @@
+{
+  "name": "frame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Masum-Osman",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "config": "^3.3.3",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.3.1",
+    "joi": "^17.3.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.9",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "pg": "^8.7.1",
+    "request": "^2.88.2",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3"
+  }
+}
