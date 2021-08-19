@@ -1,16 +1,15 @@
 const DMLQueries =
 {
-    'InsertIntoUserDetails' : `insert into user_details (username, sex, age) values (?, ? ,?);`,
+    'GetDiscountFromProducts' : `select discount_amount from products where product_code = ?;`,
     
-    'InsertIntoVehicle' :   `insert into vehicles (ownername, brand, model) values (?, ? ,?);`,
+    'GetDiscountFormParentCategory1' :   `select parent_category_1.discount_amount from parent_category_1 
+                            inner join products on products.parent_category_id = parent_category_1.category_id
+                            where products.product_code = ?;`,
 
-    'insertIntoRidesDetails'    :   `insert into rides_details (rider_name, origin, destination, avalable_seats, vehicle_brand, vehicle_name) 
-    values (?, ? , ?, ?, ?, ?);`,
-
-    'FindRides' :   `SELECT * FROM rides_details where rider_name = ? and origin = ? and destination = ? and
-    avalable_seats = ? and vehicle_brand = ?;`,
-
-    'EndRide'   :   `update rides_details set ride_is_active = 1 where ride_id = ?;`
+    'GetDiscountFormParentCategory2'    :   ` select parent_category_2.discount_amount from parent_category_1 
+                            inner join products on products.parent_category_id = parent_category_1.category_id
+                            inner join parent_category_2 on parent_category_1.parent_category_id = parent_category_2.category_id
+                            where products.product_code = ?;`
 };
 
 

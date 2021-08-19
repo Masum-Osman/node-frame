@@ -36,4 +36,4 @@ var  connectionInSUdb = mysql.createPool(
     logger.info("Opening connection to MySql DB" + connectionInSUdb);
 
 // exports.mysql = mysql;
-exports.shopUpDB = connectionInSUdb;
+exports.ai_beesDB = connectionInSUdb;

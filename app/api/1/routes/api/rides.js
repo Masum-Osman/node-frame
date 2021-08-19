@@ -1,4 +1,4 @@
-const addUserController = require('../../controllers/adduserController')
+const discountController = require('../../controllers/discountController')
 const validateRouteAccess = require('../../../../../common/middleware/authValidation')
 
 const apiVersion = '1';
@@ -11,7 +11,7 @@ var ridesRoute = function (app) {
 
     app.post('/api/'+apiVersion+'/check_discount', [
         validateRouteAccess.validJWTForExistingPhPToken,
-        addUserController.addUser
+        discountController.discountCheck
     ]);
 };
 module.exports = {
