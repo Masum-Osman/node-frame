@@ -2,3 +2,58 @@ Thursday, August 19th, 2021, 1:03:03 PM [info]: main - Opening connection to MyS
 Thursday, August 19th, 2021, 2:02:28 PM [info]: main - Opening connection to MySql DB[object Object]
 Thursday, August 19th, 2021, 2:03:45 PM [info]: main - Opening connection to MySql DB[object Object]
 Thursday, August 19th, 2021, 3:31:44 PM [info]: main - Opening connection to MySql DB[object Object]
+Thursday, August 19th, 2021, 6:07:16 PM [info]: main - Opening connection to MySql DB[object Object]
+Thursday, August 19th, 2021, 6:08:03 PM [info]: main - Opening connection to MySql DB[object Object]
+Thursday, August 19th, 2021, 6:08:55 PM [info]: main - Opening connection to MySql DB[object Object]
+Thursday, August 19th, 2021, 6:11:28 PM [info]: main - Opening connection to MySql DB[object Object]
+2021-08-19T12:11:30.333Z [error]: main - uncaughtException: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 201
+AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 201
+    at F:\Codes\Node Framework\test\discount.js:16:42
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Thursday, August 19th, 2021, 6:12:07 PM [info]: main - Opening connection to MySql DB[object Object]
+Thursday, August 19th, 2021, 6:12:59 PM [info]: main - Opening connection to MySql DB[object Object]
+2021-08-19T12:13:00.676Z [error]: main - uncaughtException: Cannot read property 'should' of undefined
+TypeError: Cannot read property 'should' of undefined
+    at F:\Codes\Node Framework\test\discount.js:17:42
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Thursday, August 19th, 2021, 6:14:10 PM [info]: main - Opening connection to MySql DB[object Object]
+2021-08-19T12:14:10.761Z [error]: main - uncaughtException: Cannot read property 'should' of undefined
+TypeError: Cannot read property 'should' of undefined
+    at F:\Codes\Node Framework\test\discount.js:17:42
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Thursday, August 19th, 2021, 6:15:13 PM [info]: main - Opening connection to MySql DB[object Object]
+2021-08-19T12:15:13.799Z [error]: main - uncaughtException: expected { Object (accessToken, refreshToken) } to have property 'token'
+AssertionError: expected { Object (accessToken, refreshToken) } to have property 'token'
+    at F:\Codes\Node Framework\test\discount.js:18:47
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Thursday, August 19th, 2021, 6:15:47 PM [info]: main - Opening connection to MySql DB[object Object]
+Thursday, August 19th, 2021, 6:25:49 PM [info]: main - Opening connection to MySql DB[object Object]
+2021-08-19T12:25:52.028Z [error]: main - uncaughtException: expected {} not to be an object
+AssertionError: expected {} not to be an object
+    at F:\Codes\Node Framework\test\discount.js:27:49
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+Thursday, August 19th, 2021, 6:29:39 PM [info]: main - Opening connection to MySql DB[object Object]

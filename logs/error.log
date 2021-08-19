@@ -1,0 +1,44 @@
+2021-08-19T12:11:30.333Z [error]: main - uncaughtException: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 201
+AssertionError: expected { Object (_events, _eventsCount, ...) } to have status code 200 but got 201
+    at F:\Codes\Node Framework\test\discount.js:16:42
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2021-08-19T12:13:00.676Z [error]: main - uncaughtException: Cannot read property 'should' of undefined
+TypeError: Cannot read property 'should' of undefined
+    at F:\Codes\Node Framework\test\discount.js:17:42
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2021-08-19T12:14:10.761Z [error]: main - uncaughtException: Cannot read property 'should' of undefined
+TypeError: Cannot read property 'should' of undefined
+    at F:\Codes\Node Framework\test\discount.js:17:42
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2021-08-19T12:15:13.799Z [error]: main - uncaughtException: expected { Object (accessToken, refreshToken) } to have property 'token'
+AssertionError: expected { Object (accessToken, refreshToken) } to have property 'token'
+    at F:\Codes\Node Framework\test\discount.js:18:47
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\parsers\json.js:19:7)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2021-08-19T12:25:52.028Z [error]: main - uncaughtException: expected {} not to be an object
+AssertionError: expected {} not to be an object
+    at F:\Codes\Node Framework\test\discount.js:27:49
+    at Test.Request.callback (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:716:12)
+    at IncomingMessage.<anonymous> (F:\Codes\Node Framework\node_modules\superagent\lib\node\index.js:916:18)
+    at IncomingMessage.emit (events.js:327:22)
+    at endReadableNT (_stream_readable.js:1221:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
