@@ -1,5 +1,4 @@
-// const commissionRoute12 = require('./api/12/commission/commissionRoute');
-const ridesRoute = require('./api/rides');
+const ridesRoute = require('./api/apiRoutes');
 
 module.exports.API =
 {
