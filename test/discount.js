@@ -53,7 +53,7 @@ describe('TEST APIs', () => {
                 })
         })
 
-        it("It should return Token Not Found", (done) => {
+        it("It should return 404", (done) => {
             let body = {
                 product_code: "12MxM",
                 user_id: 100,
