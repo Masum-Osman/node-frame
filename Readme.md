@@ -1,3 +1,11 @@
+## System Diagram:
+![alt text](https://github.com/Masum-Osman/node-frame/blob/master/Diagram.JPG?raw=true)
+
+### Description:
+This is a project following MVC pattern.
+It has separate layer between it's route, controllers and model. 
+Only DataBase connection id made when the model is fired.
+
 ## Things Should do, But I couldn't because of time:
 
 1. Promise Based Code:
