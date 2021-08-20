@@ -39,8 +39,10 @@ It looks through the tables if the desired product have any dicount available. I
 ```javascript
 res.length == 0 || res[0].discount_amount == null || res[0].discount_amount == 0
 ```
-## Swagger URL:
+## Swagger:
+### URL
 https://app.swaggerhub.com/apis/t16643/discount/1.0.0#/Token
+
 
 ## Things Should do, But I couldn't because of time:
 
