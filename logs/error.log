@@ -84,3 +84,15 @@ AssertionError: expected { Object (_events, _eventsCount, ...) } to not have sta
     at IncomingMessage.emit (events.js:327:22)
     at endReadableNT (_stream_readable.js:1221:12)
     at processTicksAndRejections (internal/process/task_queues.js:84:21)
+2021-11-15T08:06:07.788Z [error]: main - uncaughtException: nill is not defined
+ReferenceError: nill is not defined
+    at Query.<anonymous> (/home/masum/Documents/plays/node-frame/app/api/1/model/serviceModel.js:18:19)
+    at Query.<anonymous> (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/Connection.js:526:10)
+    at Query._callback (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/Connection.js:488:16)
+    at Query.Sequence.end (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/sequences/Query.js:149:8)
+    at Query.EofPacket (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/sequences/Query.js:133:8)
+    at Protocol._parsePacket (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/masum/Documents/plays/node-frame/node_modules/mysql/lib/protocol/Protocol.js:38:16)

@@ -14,8 +14,8 @@
         "MYSQL": {
           "HOST": "localhost",
           "USER": "root",
-          "PASSWORD": "",
-          "DATABASE": "ai_bees",
+          "PASSWORD": "password",
+          "DATABASE": "trucklagbe_db",
           "DIALECT": "mysql",
           "dialectModulePath": "mysql"
         }
