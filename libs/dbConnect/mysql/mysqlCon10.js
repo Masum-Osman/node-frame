@@ -15,7 +15,7 @@ const DBOptionsForTLdb = {
         max: 200,
     }
 };
-
+console.log(DBOptionsForTLdb);
 var  connectionInSUdb = mysql.createPool(
     {
         host: DBOptionsForTLdb.host,
