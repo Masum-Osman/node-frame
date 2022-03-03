@@ -1,5 +1,7 @@
 const DMLQueries =
 {
+    'test_products' : `select * from products where parent_category_id = 1`,
+
     'GetDiscountFromProducts' : `select discount_amount from products where product_code = ?;`,
     
     'GetDiscountFormParentCategory1' :   `select parent_category_1.discount_amount from parent_category_1 

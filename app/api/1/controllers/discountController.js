@@ -11,9 +11,10 @@ function discountCheck(req, res)
     value.product_code = req.body.product_code;
     value.user_id = req.body.user_id;
     value.amount = req.body.amount;
+    console.log(value);
 
     status = bodyParamCheck.bodyValidationCheck(value);
-    
+    // console.log(status);
     if(status != true)
     {
         res.json(status);
@@ -23,16 +24,19 @@ function discountCheck(req, res)
     {
         discountModel.findDiscount(value, function (err, result) 
         {
-
+            console.log(result);
             if (err) 
             {
+                
                 res.send(err);
             }
             else 
             {
-                addNewUserResponse.status = "success";
-                addNewUserResponse.response = result;
-                res.json(addNewUserResponse);        
+
+                // addNewUserResponse.status = "success";
+                // addNewUserResponse.response = result;
+                // res.json(addNewUserResponse);
+                res.json(result);
             }
         });
     }
