@@ -16,7 +16,7 @@ const DBOptionsForTLdb = {
     }
 };
 
-var  connectionInSUdb = mysql.createPool(
+var connectionInSUdb = mysql.createPool(
     {
         host: DBOptionsForTLdb.host,
         user: DBOptionsForTLdb.user,
@@ -33,7 +33,7 @@ var  connectionInSUdb = mysql.createPool(
         },
     });
 
-    logger.info("Opening connection to MySql DB" + connectionInSUdb);
+logger.info("Opening connection to MySql DB" + connectionInSUdb);
 
 // exports.mysql = mysql;
 exports.ai_beesDB = connectionInSUdb;

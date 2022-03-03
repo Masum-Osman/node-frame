@@ -12,12 +12,12 @@
         "BASE_URL": "127.0.0.1",
         "API_URL": "127.0.0.1/api",
         "MYSQL": {
-          "HOST": "localhost",
-          "USER": "root",
-          "PASSWORD": "",
-          "DATABASE": "ai_bees",
-          "DIALECT": "mysql",
-          "dialectModulePath": "mysql"
+            "HOST": "localhost",
+            "USER": "root",
+            "PASSWORD": "$$$$Bala22",
+            "DATABASE": "testmasum",
+            "DIALECT": "mysql",
+            "dialectModulePath": "mysql"
         }
     }
 ]

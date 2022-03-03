@@ -2,37 +2,31 @@ const bodyParamCheck = require('../../../../libs/helper/bodyParamCheck');
 const discountModel = require('../model/discountModel');
 
 
-function discountCheck(req, res) 
-{
+function discountCheck(req, res) {
     var status = true;
-    var value = {} ;
+    var value = {};
     var addNewUserResponse = {};
 
     value.product_code = req.body.product_code;
     value.user_id = req.body.user_id;
     value.amount = req.body.amount;
-
+    console.log(value, 'value');
     status = bodyParamCheck.bodyValidationCheck(value);
-    
-    if(status != true)
-    {
+    if (status != true) {
         res.json(status);
         return;
     }
-    else
-    {
-        discountModel.findDiscount(value, function (err, result) 
-        {
-
-            if (err) 
-            {
+    else {
+        discountModel.findDiscount(value, function (err, result) {
+            console.log(result);
+            if (err) {
+                console.log(err);
                 res.send(err);
             }
-            else 
-            {
+            else {
                 addNewUserResponse.status = "success";
                 addNewUserResponse.response = result;
-                res.json(addNewUserResponse);        
+                res.json(addNewUserResponse);
             }
         });
     }
